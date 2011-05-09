@@ -166,7 +166,6 @@ func main() {
 		// Handlers.
 		Register(config.MainIndexRegexp, "GET", handlers.MainIndexHandler(context)).
 		Register(config.RssFeedRegexp, "GET", handlers.RssFeedHandler(context)).
-		//Register(config.PodcastFeedRegexp, "GET", handlers.PodcastFeedHandler(context)).
 		Register(config.MonthlyArchiveRegexp, "GET", handlers.DateArchiveHandler(context)).
 		Register(config.YearlyArchiveRegexp, "GET", handlers.DateArchiveHandler(context)).
 		Register(config.TagArchiveRegexp, "GET", handlers.TagArchiveHandler(context,
