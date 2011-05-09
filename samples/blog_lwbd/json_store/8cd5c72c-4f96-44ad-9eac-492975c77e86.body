@@ -1,0 +1,9 @@
+p. Recently I've been spending some time getting together a proposal for the HTML5 "&#60;video&#62; and &#60;audio&#62; tags":http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html that enables web applications to gather statistics about how media playback is performing.
+
+p. A lot of this was inspired by "Mozilla's statistics support":http://blog.pearce.org.nz/2011/03/html5-video-painting-performance.html and the "WebKit support":http://trac.webkit.org/changeset/77394 I added at the beginning of the year (which shipped in Chrome 10).
+
+p. So after a bunch of feedback, today I added a "proposal":http://wiki.whatwg.org/wiki/Video_Metrics#Proposal to the "WHATWG":http://www.whatwg.org/ "wiki":http://wiki.whatwg.org/wiki/Video_Metrics &#x2014; hopefully it won't get crushed too hard and we can get this into the HTML5 spec soon.
+
+p. The key points are the ability to monitor download and decode bitrates as well as the presentation statistics and an interesting little metric called "jitter" that can give the developer feedback on perceived framerate quality.
+
+p. Anyhow, take a look and give feedback on the "list":http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2011-May/031423.html.

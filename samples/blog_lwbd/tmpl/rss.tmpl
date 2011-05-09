@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<channel>
+<title>{{context.Config.Title|entities}}</title>
+<link>{{context.Config.BlogUrl}}</link>
+<atom:link rel="self" type="application/rss+xml" title="{{context.Config.Title|entities}}" href="{{context.Config.BlogUrl}}{{context.Config.RssUrl}}" xmlns:atom="http://purl.org/atom/ns#" >{{context.Config.BlogUrl}}</atom:link>
+
+<description>{{context.Config.Description}}</description>
+<dc:language>en-us</dc:language>
+<copyright>Copyright 2011</copyright>
+<generator>{{context.Generator}}</generator>
+<lastBuildDate>{{lastBuildDate}}</lastBuildDate>
+<image>
+  <title>{{context.Config.Title|entities}}</title> 
+  <url>{{context.Config.BlogUrl}}/images/sjl-rss.jpg</url> 
+  <link>{{context.Config.BlogUrl}}</link> 
+</image>
+
+{{content}}
+
+</channel>
+</rss>

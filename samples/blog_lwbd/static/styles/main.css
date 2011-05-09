@@ -1,0 +1,219 @@
+/**
+ * Copyright 2011 Steve Lacey
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Drop shadows without images. Based on
+ * http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+
+/* Common */
+.drop-shadow {
+    position: relative;
+    float: left;
+    padding: 1em; 
+    margin: 0 1em 1em; 
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* Inline lists. */
+ul.as-list    { list-style: none; margin: 0; padding: 0; }
+ul.as-list li { display: inline; }
+ul.as-list li:before             { content: ", "   ; }
+ul.as-list li:last-child:before  { content: " and "; }
+ul.as-list li:last-child:after   { content: "."    ; }
+ul.as-list li:first-child:before { content: ""     ; }
+
+.lifted-up {
+    -webkit-box-shadow: #ccc 4px 0 10px, #ccc -4px 0 10px, #aaa 0 38px 36px -24px;
+       -moz-box-shadow: #ccc 4px 0 10px, #ccc -4px 0 10px, #aaa 0 38px 36px -24px;
+            box-shadow: #ccc 4px 0 10px, #ccc -4px 0 10px, #aaa 0 38px 36px -24px;
+ -webkit-border-radius: 4px; 
+    -moz-border-radius: 4px; 
+         border-radius: 4px;
+}
+
+.sep {
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+}
+
+/**
+ * Core style.
+ */
+html {
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font: normal medium/1.75 Palatino, Tahoma, serif;
+  word-spacing: 0.1em;
+  width: 1060px;
+  margin: 1em auto;
+  background-color: #fafaff;
+  color: #222;
+  background: url(/styles/ink.jpg);
+  background-repeat: no-repeat;
+  background-position: -155px 0px;
+}
+
+h1, h2, h3, h4 {
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+header a {
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #a97c4d;    
+}
+
+a:hover {
+    color:#7D945C;
+    border-bottom: 1px dotted;
+}
+
+sup, sub {
+    font-size: 0.7em;
+}
+
+pre code {
+    border-left: 3px solid #aaa;
+}
+
+code {
+    font-size: 0.9em;
+}
+
+post-nav {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+blockquote {
+  font: normal medium/1.4 Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+}
+
+#main-heading a:hover {
+    color: #000;
+}
+
+#main-heading h1 {
+    font-size: 400%;
+    line-height: 1.1;
+}
+
+#main {
+    float: left;
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em 0 3em 0;
+}
+
+#content {
+    float: left;
+    width: 700px;
+}
+
+#content article {
+    padding-top: 0.4em;
+}
+
+#content article:first-child {
+    border-top: none;
+}
+
+#sidebar {
+    float: right;
+    width: 300px;
+    font-size: 90%;
+    line-height: 1.75;
+    word-spacing: 0.1em;
+    margin: 1em 0 3em 0;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar h2 {
+    text-transform: lowercase;
+}
+
+#img-me {
+    border: 1px solid #ddd;
+    padding: 0.2em;
+}
+
+article header a:hover,
+#main-heading a:hover {
+    border: none;
+}
+
+article header {
+    margin-bottom: -1em;
+}
+
+.post-nav {
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 0.5em;
+}
+
+.post-content {
+    text-align: justify;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #444;
+}
+
+.post-feedback {
+    font-size: 0.9em;
+    color: #444;
+}
+
+#disqus_thread {
+    background-color: #f0f4f7;
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+    -moz-border-radius: 4px;
+         border-radius: 4px;
+}
+
+p.footnote {
+    font-size: 0.85em;
+}
+
+sup.footnote {
+    font-weight: bold;
+}
+
+.copy {
+    clear:left;
+    text-align: center;
+}

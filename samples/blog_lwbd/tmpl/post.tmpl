@@ -1,0 +1,51 @@
+<article>
+  <header>
+    <h2><a href={{content.Path}}>{{content.Title|entities}}</a></h2>
+  </header>
+
+  <div class='post-content hyphenate'>
+{{.section content.IsFormatTextile}}
+    {{content.Body|textile}}
+{{.or}}
+{{.section content.IsFormatConvertBreaks}}
+    {{content.Body|convertbreaks}}
+{{.or}}
+    {{content.Body}}
+{{.end}}
+{{.end}}
+  </div>
+
+  <div class=post-date>
+    Posted on {{content.PublishedShort}}.
+  </div>
+
+  <footer>
+{{.section show-footer}}
+    <div class=post-nav>
+{{.section content.Tags}}
+      <ul class=as-list>This {{content.Type}} is tagged with {{.repeated section content.Tags}}<li><a href=/tag/{{@|spaces}}>{{@}}</a></li>{{.end}}</ul>
+{{.end}}
+{{.section content.Categories}}
+      <ul class=as-list>This {{content.Type}} is categorized by {{.repeated section content.Categories}}<li><a href=/category/{{@|spaces}}>{{@}}</a></li>{{.end}}</ul>
+{{.end}}
+      <nav>
+{{.section content.PreviousPath}}The previous post was &#8220;<a href={{@}}>{{content.PreviousTitle|entities}}</a>&#8221;
+{{.section content.NextPath}}{{.or}}.{{.end}}
+{{.end}}
+{{.section content.NextPath}}
+{{.section content.PreviousPath}} and the{{.or}}The{{.end}} next post is &#8220;<a href={{@}}>{{content.NextTitle|entities}}</a>&#8221;.
+{{.end}}
+      </nav>
+    </div>
+
+{{.end}}
+{{.section feedback}}
+    {{@}}
+{{.or}}
+{{.section content.IsPost}}
+   <div class=post-feedback><a href="{{content.CanonicalBlogUrl}}{{content.CanonicalPath}}#disqus_thread">Comments</a></div>
+{{.end}}
+{{.end}}
+  </footer>
+  <p class=sep>&#10002;</p>
+</article>

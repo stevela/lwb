@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>{{context.Title|entities}}</title>
+<link rel="shortcut icon" href=/favicon.ico?v={{context.Config.Version}}>
+<link rel=stylesheet href=/styles/main.css?v={{context.Config.Version}} type=text/css>
+<link rel=alternate type=application/rss+xml title="RSS 2.0" href=/index.xml /> 
+<meta name=generator content="{{context.Generator}}">
+</head>
+
+<div id=main class=lifted-up>
+  <header id=main-heading>
+    <hgroup>
+      <h1><a href=/>Random Thoughts</a></h1>
+      <h2>Tech, words and musings from an Englishman in Seattle</h2>
+    </hgroup>
+  </header>
+
+  <div id=content>
+    {{content}}
+  </div>
+</div>
+
+<div id=sidebar>
+  <img id=img-me src=/images/me_camera_190.jpg alt=me>
+  <h2>About Me</h2>
+  <p>
+    Steve Lacey, software developer
+    at <a href=http://www.google.com>Google</a>, British, married to
+    the lurvely Nabila, dad to the wonderful Julian and Jasmine. Living
+    in Kirkland (near Seattle), WA.
+  </p>
+  <h2>Contact</h2>
+  <ul>
+    <li><a href=mailto:steve@steve-lacey.com>steve@steve-lacey.com</a></li>
+    <li>+1 (425) 214-4716
+  </ul>
+  <h2>Recent Posts</h2>
+  <ul>
+    {{.repeated section context.RecentPosts}}
+    <li><a href={{Path}}>{{Title|entities}}</a></li>
+    {{.end}}
+  </ul>
+  <h2>Post Categories</h2>
+  <p>
+    {{.repeated section context.Categories}}
+    <a href=/category/{{@|spaces}}/>{{@}}</a>&nbsp;
+    {{.end}}
+  </p>
+  <h2>Archives</h2>
+    <ul>
+      {{.repeated section context.Archives}}
+      <li><a href={{Path}}>{{Description}}</a></li>
+      {{.end}}
+    </ul>
+  </p>
+  <h2>Tags</h2>
+  <p>
+    {{.repeated section context.Tags}}
+    <a href=/tag/{{@|spaces}}/>{{@}}</a>&nbsp;
+    {{.end}}
+  </p>
+</div>
+
+<p class=copy>&#169; 2001 to present, <a href=/>Steve Lacey</a>.</p>
+
+<script>
+    var disqus_shortname = '{{context.Config.DisqusShortname}}';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</html>

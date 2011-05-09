@@ -1,0 +1,17 @@
+{
+    "basename": "html5_media_stats", 
+    "categories": [
+        "tech", "chrome"
+    ], 
+    "format": "textile", 
+    "isOldEntry": false, 
+    "lastModifiedDate": "Mon May 02 22:33:46 PST 2011", 
+    "publishedDate": "Mon May 02 22:33:46 PST 2011", 
+    "status": "publish", 
+    "tags": [
+        "html5", "tech", "chrome", "video", "whatwg"
+    ], 
+    "title": "HTML5 Media Statistics", 
+    "type": "post", 
+    "uuid": "8cd5c72c-4f96-44ad-9eac-492975c77e86"
+}

@@ -1,0 +1,11 @@
+<item>
+  <dc:creator>{{context.Config.Author}}</dc:creator>
+  <title>{{content.Title|entities}}</title>
+  <description>
+    <![CDATA[{{.section content.IsFormatTextile}}{{content.Body|textileFullLinks}}{{.or}}{{.section content.IsFormatConvertBreaks}}{{content.Body|convertbreaks}}{{.or}}{{content.Body}}{{.end}}{{.end}}]]>
+  </description>
+  <link>{{context.Config.BlogUrl}}{{content.Path}}</link>
+  <guid>{{content.CanonicalBlogUrl}}{{content.CanonicalPath}}</guid>
+  <category>Tech</category>
+  <pubDate>{{content.PublishedRFC1123}}</pubDate>
+</item>
