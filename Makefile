@@ -13,6 +13,7 @@
 # limitations under the License.
 
 DIRS = pkg samples
+TEST = pkg
 
 all: install
 

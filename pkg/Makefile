@@ -13,6 +13,8 @@
 # limitations under the License.
 
 DIRS = handlers lwb store textile
+TEST = lwb textile
+
 all: install
 
 clean.dirs: $(addsuffix .clean, $(DIRS))
