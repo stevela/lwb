@@ -1,0 +1,27 @@
+h1. Light Weight Blogging - "lwb"
+
+p. LWB (pronounced "lube") is a framework for self-hosted blogging written in "Go":http://golang.org, that I use for "my blog":http://www.steve-lacey.com. See "Reinventing The Wheel":http://www.steve-lacey.com/2011/03/reinventing_the_wheel for some background information.
+
+p. It makes heavy use of Gary Burd's wonderful "twister":http://github.com/garyburd/twister library, so you'll need to install it.
+
+h2. Usage
+
+p. See the sample for an example of usage - you'll basically need to copy it and make heavy edits for your own use. But basically all posts are stored in a JSON format and it makes heavy use of caching to get great response times.
+
+h2. Caveats
+
+p. As a blogger, you need to be willing to accept a whole load of restrictions to use this software right now, for example:
+
+* No editor - you need to use <tt>tools/create_post.py</tt> to create a stub post and fill it in. You can remove the "body" entry and stick the body in a separate file if you wish (see <tt>samples/blog_lwbd/json_store/8cd5c72c-4f96-44ad-9eac-492975c77e86.post</tt> for an example). First order of business to to create an rpc interface for tools such as "MarsEdit":http://www.red-sweater.com/marsedit/.
+* No reloads - when a post is created, you'll need to restart the server.
+
+h2. Please contribute!
+
+p. There's lots to do, and I'd love some contributions... Ideas:
+
+* RPC interface for blog editors.
+* Rewrite the textile handler.
+* And more...
+
+<tt>Steve Lacey<br/>steve@steve-lacey.com<br/>http://www.steve-lacey.com
+</tt>
