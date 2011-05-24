@@ -3,8 +3,8 @@
 <head>
 <meta charset=utf-8>
 <title>{{context.Title|entities}}</title>
-<link rel="shortcut icon" href=/favicon.ico?v={{context.Config.Version}}>
-<link rel=stylesheet href=/styles/main.css?v={{context.Config.Version}} type=text/css>
+<link rel="shortcut icon" href="/favicon.ico?v={{context.Config.Version}}">
+<link rel=stylesheet href="/styles/main.css?v={{context.Config.Version}}" type=text/css>
 <link rel=alternate type=application/rss+xml title="RSS 2.0" href=/index.xml /> 
 <meta name=generator content="{{context.Generator}}">
 </head>
@@ -54,7 +54,6 @@
       <li><a href={{Path}}>{{Description}}</a></li>
       {{.end}}
     </ul>
-  </p>
   <h2>Tags</h2>
   <p>
     {{.repeated section context.Tags}}
