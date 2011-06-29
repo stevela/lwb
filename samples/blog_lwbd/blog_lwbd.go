@@ -140,7 +140,7 @@ func main() {
 
 	// Expiry for static content.
 	const maxAge = 60 * 60 * 24 * 365 * 10
-	fileHeaders := web.HeaderMap{
+	fileHeaders := web.Header{
 		web.HeaderExpires: {fmt.Sprintf("%d", maxAge)},
 		web.HeaderCacheControl: {fmt.Sprintf("max-age=%d", maxAge)},
 	}
